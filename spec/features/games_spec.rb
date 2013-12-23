@@ -33,18 +33,23 @@ describe 'the individual(game) show pages general features', :js => true do
     expect(page).to have_content('Be sure to enter your screen name!')
   end
 
-  context 'Tokens' do 
-    
+  it 'has a complex hex SecureCode for its url so its hidden from people and unguessable' do
+    page.current_url.length > 38
   end
 
-  
-  context 'Menu' do
-    it 'has a menu that allows you access to a reset button which resets the game' do
-      visit '/'
-      click_link 'Checkers'
-      expect(page).to have_content('Menu')
-    end
+  context 'Tokens' do 
+    # it 'has only certain pieces that are promotable(ex:checkers piece going to other end of board can become flying)' do
+    #   visit '/'
+    #   click_link 'Checkers'
+    #   double_click ("img[src*='checker']")
+    #   expect(page).to have_css("img[src*='king']")
+    # end
+    #hmmm don't believe double click has been integrated yet as it isnt working and can't find info online 
 
+  end
+
+
+  context 'Menu' do
     it 'has a menu that allows you to access a home button which directs you to the index page' do
       visit '/'
       click_link 'Checkers'

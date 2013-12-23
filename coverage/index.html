@@ -14,7 +14,7 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2013-12-23T00:45:18-05:00">2013-12-23T00:45:18-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-12-23T01:16:08-05:00">2013-12-23T01:16:08-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         6.38
+         6.09
        </span>
     </span> hits/line)
   </h2>
@@ -67,7 +67,7 @@
         <td>32</td>
         <td>25</td>
         <td>7</td>
-        <td>1.8</td>
+        <td>1.7</td>
       </tr>
       
       <tr>
@@ -77,7 +77,7 @@
         <td>12</td>
         <td>8</td>
         <td>4</td>
-        <td>1.7</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -137,7 +137,7 @@
         <td>10</td>
         <td>10</td>
         <td>0</td>
-        <td>115.8</td>
+        <td>109.8</td>
       </tr>
       
     </tbody>
@@ -153,7 +153,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.69
+         1.46
        </span>
     </span> hits/line)
   </h2>
@@ -195,7 +195,7 @@
         <td>32</td>
         <td>25</td>
         <td>7</td>
-        <td>1.8</td>
+        <td>1.7</td>
       </tr>
       
       <tr>
@@ -205,7 +205,7 @@
         <td>12</td>
         <td>8</td>
         <td>4</td>
-        <td>1.7</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -230,7 +230,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         7.53
+         7.23
        </span>
     </span> hits/line)
   </h2>
@@ -302,7 +302,7 @@
         <td>10</td>
         <td>10</td>
         <td>0</td>
-        <td>115.8</td>
+        <td>109.8</td>
       </tr>
       
     </tbody>
@@ -817,8 +817,8 @@
           <code class="ruby">    def set_game</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="55">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="11" data-linenumber="55">
+          <span class="hits">11</span>
           
           <code class="ruby">      @game = Game.find_by(secure_room_code: params[:secure_room_code])</code>
         </li>
@@ -913,14 +913,14 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="5">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="2" data-linenumber="5">
+          <span class="hits">2</span>
           
           <code class="ruby">    @game = Game.find_by(secure_room_code: params[:secure_room_code])</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="6">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
           
           <code class="ruby">    @message = @game.messages.create(:content =&gt; params[:message][:content],</code>
         </li>
@@ -937,14 +937,14 @@
           <code class="ruby">                                     :source =&gt; &quot;user&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="9">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
           
           <code class="ruby">    sync_new @message, scope: @game</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="10">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="2" data-linenumber="10">
+          <span class="hits">2</span>
           
           <code class="ruby">    redirect_to game_path(@message.game.secure_room_code)</code>
         </li>
@@ -2821,8 +2821,8 @@
           <code class="ruby">  def img_shown</code>
         </li>
       
-        <li class="covered" data-hits="400" data-linenumber="10">
-          <span class="hits">400</span>
+        <li class="covered" data-hits="340" data-linenumber="10">
+          <span class="hits">340</span>
           
           <code class="ruby">    self.send(&quot;image_#{self.state}&quot;)</code>
         </li>
