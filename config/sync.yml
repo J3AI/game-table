@@ -23,6 +23,15 @@ production:
   adapter: "Pusher"
   async: true
 
+test:
+  adapter_javascript_url: "http://js.pusher.com/2.1/pusher.min.js" 
+  app_id: "61276"
+  api_key: "b6f51c0af0c7ee9c2d4a"
+  auth_token: "1278709a24cc8b35384a"
+  adapter: "Pusher"
+  async: true
+
+
 # test:
 #   server: "http://localhost:9292/faye"
 #   adapter_javascript_url: "http://localhost:9292/faye/faye.js" 

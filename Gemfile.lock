@@ -96,6 +96,12 @@ GEM
     http_parser.rb (0.6.0)
     httpclient (2.3.4.1)
     i18n (0.6.9)
+    jasmine (2.0.0)
+      jasmine-core (~> 2.0.0)
+      phantomjs
+      rack (>= 1.2.1)
+      rake
+    jasmine-core (2.0.0)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
@@ -127,6 +133,7 @@ GEM
       net-ssh (>= 2.6.5)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
+    phantomjs (1.9.2.1)
     polyglot (0.3.3)
     pry (0.9.12.4)
       coderay (~> 1.0)
@@ -247,6 +254,7 @@ DEPENDENCIES
   factory_girl_rails
   guard (>= 2.1.0)
   guard-rspec
+  jasmine
   jbuilder (~> 1.2)
   jquery-rails
   jquery-ui-rails

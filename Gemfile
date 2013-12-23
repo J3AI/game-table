@@ -57,10 +57,11 @@ gem 'whenever', :require => false
 gem 'chronic'
 
 group :test, :development do
+  gem "jasmine"
   gem "pry"
   gem "seed_dump"
   gem "rspec-rails"
-  gem "capybara"
+  gem 'capybara'
   gem "selenium-webdriver"
   gem "better_errors"
   gem "binding_of_caller"

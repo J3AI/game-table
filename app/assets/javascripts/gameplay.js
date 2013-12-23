@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  var headerHeight = $(".chat-header").height()
+  var headerHeight = $(".chat-header").height();
   var windowHeight = $(window).height() > 640 ? $(window).height() : 640;
   var textHeight = windowHeight - (headerHeight + 250);
   $(".messages-box").height(textHeight);
@@ -10,7 +10,7 @@ $(document).ready(function(){
     $(".loading-box").fadeOut('slow');
     $(".main-area").fadeIn('slow');
 
-    $(".alert-whatevs-im-tired").delay(2500).fadeOut('slow')
+    $(".alert-whatevs-im-tired").delay(2500).fadeOut('slow');
 
 
     $(".board").mousedown(function(){
@@ -45,7 +45,7 @@ $(document).ready(function(){
     });
 
     $(window).resize(function(){
-      var headerHeight = $(".chat-header").height()
+      var headerHeight = $(".chat-header").height();
       var windowHeight = $(window).height() > 640 ? $(window).height() : 640;
       var textHeight = windowHeight - (headerHeight + 220);
       $(".messages-box").height(textHeight);
@@ -53,7 +53,7 @@ $(document).ready(function(){
 
 
     $(".dice-roll").click(function(){
-      var name = $("#message_name").val(); 
+      var name = $("#message_name").val();
 
       $.post($(".dice-roll").attr("href"), "name="+name, function(){
         $(".messages-box").scrollTop($(".messages-box")[0].scrollHeight);
@@ -81,7 +81,7 @@ $(document).ready(function(){
     });
 
     $(".token").on("dblclick", function(){
-      if($(this).data("flip") == true) {
+      if($(this).data("flip") === true) {
         console.log($(this).data("flip"));
         var tokenId = $(this).data("id");
         $.post("tokens/"+tokenId+"/flip", function(){});
