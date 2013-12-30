@@ -50,10 +50,30 @@
       </div>
     </div>
   </div>
-   <%= form_tag(email_path, method: "post", remote: true) do %>
-      <input type="text" name="email" placeholder="your friend's email">
-      <%= submit_tag("Invite friends", :class => "btn btn-success btn-md") %>
-  <% end %> 
+
+
+  <!-- Button trigger modal -->
+<button class="btn dropdown-toggle btn-mini btn-success supermodal" data-toggle="modal" data-target="#myModal">
+  Invite Friend
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Type in Friend's Name and click Submit</h4>
+      </div>
+      <div class="modal-body">
+        <%= form_tag(email_path, method: "post", remote: true) do %>
+          <input type="text" name="email" placeholder="your friend's email">
+          <%= submit_tag("Invite friends", :class => "btn btn-success btn-md send-email") %>
+        <% end %> 
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
   <div class="menu">
 

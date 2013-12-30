@@ -51,7 +51,6 @@ $(document).ready(function(){
       $(".messages-box").height(textHeight);
     });
 
-
     $(".dice-roll").click(function(){
       var name = $("#message_name").val();
 
@@ -87,6 +86,13 @@ $(document).ready(function(){
         $.post("tokens/"+tokenId+"/flip", function(){});
       }
     });
+
+    $(".send-email").click(function(){
+      $('#myModal').modal('hide');
+    });
+
+
+
 
   });
 });

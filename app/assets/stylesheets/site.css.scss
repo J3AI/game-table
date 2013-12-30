@@ -112,6 +112,25 @@ html, body {
   top: 10px;
 }
 
+.supermodal {
+  position: fixed;
+  left: 95px;
+  top: 10px;
+}
+
+.send-email {
+  
+}
+
+.modal-backdrop.fade {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.modal-backdrop.fade.in {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
 .tabletop {
   width: auto;
   height: 100%;
