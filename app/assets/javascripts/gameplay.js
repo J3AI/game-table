@@ -89,6 +89,7 @@ $(document).ready(function(){
 
     $(".send-email").click(function(){
       $('#myModal').modal('hide');
+      alert("An email has been sent to your friend.");
     });
 
 
