@@ -166,6 +166,13 @@ html, body {
   overflow: hidden;
 }
 
+.stb-token {
+  height: 200px;
+  width: 75px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
 /*chat styling*/
 
 .chat {
@@ -240,9 +247,22 @@ textarea {
   margin: 3px 0 2px;
 }
 
-.button-box input {
+.button-box input, .button-box a {
   width: 100px;
   text-align: center;
+}
+
+.button-box a {
+  height: 42px;
+}
+
+.button-box-for-stb input, .button-box-for-stb a {
+  width: 70px;
+  text-align: center;
+}
+
+.button-box-for-stb a {
+  height: 42px;
 }
 
 /*footer styling*/

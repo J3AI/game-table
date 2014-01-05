@@ -7,6 +7,7 @@ GameTable::Application.routes.draw do
   get '/games/chess' => "games#chess", :as => "chess"
   get '/games/backgammon' => "games#backgammon", :as => "backgammon"
   get '/games/chinese_checkers' => "games#chinese_checkers", :as => "chinese_checkers"
+  get '/games/shut_the_box' => "games#shut_the_box", :as => "shut_the_box"
   post '/games/tokens/:id/move', :to => 'tokens#move'
   post '/games/tokens/:id/flip', :to => 'tokens#flip'
   get  '/games/:secure_room_code' => 'games#show', :as => "game"
@@ -14,7 +15,7 @@ GameTable::Application.routes.draw do
   resources :games, except: [:show, :new]
   post '/games/messages/:secure_room_code', :to => 'messages#create', :as => 'messages'
   post '/games/roll/:secure_room_code', :to => 'messages#dice', :as => 'dice'
-
+  post '/games/tally/:secure_room_code', :to => 'messages#tally', :as => 'tally'
 
   get '/about' => 'static_pages#about'
   get '/contact' => 'static_pages#contact'

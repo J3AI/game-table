@@ -31,6 +31,12 @@
             <%= f.submit "Send", class: "btn btn-success btn-lg signup" %>
               <%= link_to "Roll Dice!", "/games/roll/#{@game.secure_room_code}", method: "post", class: "btn btn-success btn-lg signup dice-roll" %>
           </div>
+        <% elsif @game.name == "shut_the_box" %>
+          <div class="button-box-for-stb">
+            <%= f.submit "Send", class: "btn btn-success btn-lg signup" %>
+              <%= link_to "Roll!", "/games/roll/#{@game.secure_room_code}", method: "post", class: "btn btn-success btn-lg signup dice-roll" %>
+              <%= link_to "Tally!", "/games/tally/#{@game.secure_room_code}", method: "post", class: "btn btn-success btn-lg signup tally" %>
+          </div>
         <% else %>
           <div class="normal-send">
             <%= f.submit "Send", class: "btn btn-success btn-lg" %>

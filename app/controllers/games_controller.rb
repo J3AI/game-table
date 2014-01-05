@@ -26,6 +26,11 @@ class GamesController < ApplicationController
     redirect_to game_path(@chinese_checkers.secure_room_code)
   end
 
+  def shut_the_box
+    @shut_the_box = GameBuilder.build_shut_the_box
+    redirect_to game_path(@shut_the_box.secure_room_code)
+  end
+
   def email
     GameMailer.game_email(@game, params[:email]).deliver
     redirect_to :back

@@ -1,6 +1,15 @@
-<div class="token token<%= token.id %>" data-id="<%=token.id%>" data-flip="<%= token.flippable %>" style="position: absolute; top: <%= token.y_coordinate %>px; left: <%= token.x_coordinate %>px">
-  <img src="<%= image_path(token.img_shown) %>">
-  <% if token.flippable %>
-    <img src="<%= image_path(token.img_hidden) %>" style="visibility:hidden">
-  <% end %>
-</div>
+<% if @game.name == "shut_the_box" %>
+  <div class="stb-token token<%= token.id %>" data-id="<%=token.id%>" data-flip="<%= token.flippable %>" style="position: absolute; top: <%= token.y_coordinate %>px; left: <%= token.x_coordinate %>px">
+    <img src="<%= image_path(token.img_shown) %>">
+    <% if token.flippable %>
+      <img src="<%= image_path(token.img_hidden) %>" style="visibility:hidden">
+    <% end %>
+  </div>
+<% else %>
+  <div class="token token<%= token.id %>" data-id="<%=token.id%>" data-flip="<%= token.flippable %>" style="position: absolute; top: <%= token.y_coordinate %>px; left: <%= token.x_coordinate %>px">
+    <img src="<%= image_path(token.img_shown) %>">
+    <% if token.flippable %>
+      <img src="<%= image_path(token.img_hidden) %>" style="visibility:hidden">
+    <% end %>
+  </div>
+<% end %>
