@@ -51,14 +51,18 @@ $(document).ready(function(){
       $(".messages-box").height(textHeight);
     });
 
-    $(".dice-roll").click(function(){
-      var name = $("#message_name").val();
+    function setUpButtonClickHandlers(className) {
+      $(className).click(function(){
+        var name = $("#message_name").val();
 
-      $.post($(".dice-roll").attr("href"), "name="+name, function(){
-        $(".messages-box").scrollTop($(".messages-box")[0].scrollHeight);
+        $.post($(className).attr("href"), "name="+name, function(){
+          $(".messages-box").scrollTop($(".messages-box")[0].scrollHeight);
+        });
+      return false;
       });
-    return false;
-    });
+    }
+    setUpButtonClickHandlers(".dice-roll");
+    setUpButtonClickHandlers(".tally");
 
     $(".message-input form").submit(function(){
       var formData = $(".new_message").serialize();
@@ -78,22 +82,22 @@ $(document).ready(function(){
        $("form").submit();
       }
     });
-
-    $(".token").on("dblclick", function(){
-      if($(this).data("flip") === true) {
-        console.log($(this).data("flip"));
-        var tokenId = $(this).data("id");
-        $.post("tokens/"+tokenId+"/flip", function(){});
-      }
-    });
+    function setUpTokenDBLClickHandlers(className) {
+      $(className).on("dblclick", function(){
+        if($(this).data("flip") === true) {
+          console.log($(this).data("flip"));
+          var tokenId = $(this).data("id");
+          $.post("tokens/"+tokenId+"/flip", function(){});
+        }
+      });
+    }
+    setUpTokenDBLClickHandlers(".token");
+    setUpTokenDBLClickHandlers(".stb-token");
 
     $(".send-email").click(function(){
       $('#myModal').modal('hide');
       alert("An email has been sent to your friend.");
     });
-
-
-
 
   });
 });

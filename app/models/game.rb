@@ -28,6 +28,10 @@ class Game < ActiveRecord::Base
     GameBuilder.build_chinese_checkers(self)
   end
 
+  def reset_shut_the_box
+    GameBuilder.build_shut_the_box(self)
+  end
+
   def self.delete
     Game.where("created_at <= ?", Chronic.parse("one week ago")).destroy
     #games from one week ago or older

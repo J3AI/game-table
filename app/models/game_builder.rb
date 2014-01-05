@@ -215,8 +215,24 @@ class GameBuilder < ActiveRecord::Base
     g
   end
 
+  def self.build_shut_the_box(g = nil)
+    if g == nil
+      g = Game.create(name: "shut_the_box", secure_room_code: Game.secure_room_code)
+      g.create_board(image: "blank.png")
+    end
 
-
-
-
+    g.tokens.find_or_create_by(:name => "1").update(:y_coordinate => 35, :x_coordinate => -175, :image_1 => "x.png", :state => 0, :image_0 => "1.png", :flippable => true )
+    g.tokens.find_or_create_by(:name => "2").update(:y_coordinate => 35, :x_coordinate => -85, :image_1 => "x.png", :state => 0, :image_0 => "2.png", :flippable => true )
+    g.tokens.find_or_create_by(:name => "3").update(:y_coordinate => 35, :x_coordinate => 5, :image_1 => "x.png", :state => 0, :image_0 => "3.png", :flippable => true )
+    g.tokens.find_or_create_by(:name => "4").update(:y_coordinate => 35, :x_coordinate => 95, :image_1 => "x.png", :state => 0, :image_0 => "4.png", :flippable => true )
+    g.tokens.find_or_create_by(:name => "5").update(:y_coordinate => 35, :x_coordinate => 185, :image_1 => "x.png", :state => 0, :image_0 => "5.png", :flippable => true )
+    g.tokens.find_or_create_by(:name => "6").update(:y_coordinate => 35, :x_coordinate => 275, :image_1 => "x.png", :state => 0, :image_0 => "6.png", :flippable => true )
+    g.tokens.find_or_create_by(:name => "7").update(:y_coordinate => 35, :x_coordinate => 365, :image_1 => "x.png", :state => 0, :image_0 => "7.png", :flippable => true )
+    g.tokens.find_or_create_by(:name => "8").update(:y_coordinate => 35, :x_coordinate => 455, :image_1 => "x.png", :state => 0, :image_0 => "8.png", :flippable => true )
+    g.tokens.find_or_create_by(:name => "9").update(:y_coordinate => 35, :x_coordinate => 545, :image_1 => "x.png", :state => 0, :image_0 => "9.png", :flippable => true )
+    g.tokens.find_or_create_by(:name => "10").update(:y_coordinate => 35, :x_coordinate => 635, :image_1 => "x.png", :state => 0, :image_0 => "10.png", :flippable => true )
+    g.tokens.find_or_create_by(:name => "11").update(:y_coordinate => 35, :x_coordinate => 725, :image_1 => "x.png", :state => 0, :image_0 => "11.png", :flippable => true )
+    g.tokens.find_or_create_by(:name => "12").update(:y_coordinate => 35, :x_coordinate => 815, :image_1 => "x.png", :state => 0, :image_0 => "12.png", :flippable => true )
+    g
+  end
 end

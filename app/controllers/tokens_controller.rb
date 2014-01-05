@@ -10,6 +10,7 @@ class TokensController < ApplicationController
   end
 
   def flip
+    @game = @token.game
     @token.state = (@token.state + 1) % 2
     @token.save
     sync_update @token
