@@ -4,6 +4,7 @@
 //= depend_on_asset "glyphicons-halflings-regular.svg"
 //= depend_on_asset "chinese_checkers_bg.jpg"
 //= depend_on_asset "wood-texture.jpg"
+//= depend_on_asset "green_felt.jpg"
 
 /*font*/
  @font-face {
@@ -136,7 +137,7 @@ html, body {
   width: auto;
   height: 100%;
   margin-right: 250px;
-  background: green url('green_felt.jpg') center;
+  background: green image-url('green_felt.jpg') center;
   text-align: center;
   position: relative;
   overflow: scroll;
