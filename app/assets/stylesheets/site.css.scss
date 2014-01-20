@@ -3,6 +3,7 @@
 //= depend_on_asset "glyphicons-halflings-regular.ttf"
 //= depend_on_asset "glyphicons-halflings-regular.svg"
 //= depend_on_asset "chinese_checkers_bg.jpg"
+//= depend_on_asset "wood-texture.jpg"
 
 /*font*/
  @font-face {
@@ -174,7 +175,7 @@ html, body {
   width: 250px;
   height: 100%;
   /*background-color: rgba(245, 245, 245, 0.8);*/
-  background: grey url('wood-texture.jpg') center;
+  background: grey image-url('wood-texture.jpg') center;
   border: solid black 1px; /*for now*/
 }
 
