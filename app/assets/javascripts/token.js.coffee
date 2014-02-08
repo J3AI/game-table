@@ -2,7 +2,7 @@ class Sync.Token extends Sync.View
 
   afterUpdate: ->
     console.log("it's working")
-    @$el.draggable({ containment: ".tabletop", grid: [ 10, 10 ] })
+    @$el.draggable({ containment: ".tabletop" })
     thisToken = ".token" + @$el.data("id")
 
     `$(thisToken).on("dragstop", function(event, ui){
@@ -15,7 +15,7 @@ class Sync.Token extends Sync.View
         return coord;
       };
       x = snappedToGrid(x);
-      y = snappedToGrid(y)
+      y = snappedToGrid(y);
 
       var tokenId = $(this).data("id");
       var valuesToSubmit = "x_coordinate=" + x + "&y_coordinate="+ y;
