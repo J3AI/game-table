@@ -1,5 +1,5 @@
-describe 'the main page', :js => true do
 
+describe 'the main page', :js => true do
   it 'will let you create a new game checkers' do
     visit '/'
     click_link 'Checkers'
@@ -23,7 +23,6 @@ describe 'the main page', :js => true do
     click_link 'Chinese Checkers'
     expect(page).to have_css("img[src*='cc_yellow']")
   end
-
 end
 
 describe 'the individual(game) show pages general features', :js => true do
@@ -45,7 +44,19 @@ describe 'the individual(game) show pages general features', :js => true do
     #   expect(page).to have_css("img[src*='king']")
     # end
     #hmmm don't believe double click has been integrated yet as it isnt working and can't find info online 
+    it 'is draggable and real-time (across all players who are currently viewing the page)' do
+      visit '/'
+      click_link 'Checkers'
+      first_token = all('.token')[0]
+      initial_position = all('.token')[0]["style"]["cssText"]
+      last_token = all('.token')[-1]
+      first_token.drag_to(last_token)
+      visit(current_url)
+      end_position = all('.token')[0]["style"]["cssText"]
+      binding.pry
+      expect(initial_position).to eq(end_position)
 
+    end
   end
 
 
