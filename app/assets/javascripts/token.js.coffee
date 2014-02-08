@@ -8,8 +8,17 @@ class Sync.Token extends Sync.View
     `$(thisToken).on("dragstop", function(event, ui){
       var x = $(this).position().left;
       var y = $(this).position().top;
+
+      var snappedToGrid = function(coord){
+        var multval = Math.floor(coord/80);
+        coord = 80*multval+10;
+        return coord;
+      };
+      x = snappedToGrid(x);
+      y = snappedToGrid(y)
+
       var tokenId = $(this).data("id");
-      var valuesToSubmit = "x_coordinate=" + x + "&y_coordinate="+ y
+      var valuesToSubmit = "x_coordinate=" + x + "&y_coordinate="+ y;
       $.post("tokens/"+tokenId+"/move", valuesToSubmit, function(){})
     })`
 
